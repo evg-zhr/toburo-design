@@ -15,6 +15,8 @@ BLOBS = {
     "/_blob/ee25da5eb4234dac2da8a9c76f12d419": "img/wm-t.png",
     "/_blob/990a13dcc9548109e400d3363c575327": "img/wm-buro.png",
     "/_blob/da99a2c5c3c2810c125d5cbd63eb39ec": "img/tt-specimen.png",
+    "/_blob/84ef3e58c4728f501b864323de1ea03f": "img/wm-bb.png",
+    "/_blob/f4012e54fbdec642b1e9e600bef3986d": "img/wm-toburo.png",
 }
 
 PAGES = {
@@ -34,6 +36,11 @@ PAGES = {
     "CaseDesktop": ("case.html", "fluid"),
     "CaseMobile": ("case-mobile.html", "phone"),
     "ContentSpec": ("content-spec.html", "fixed"),
+    "MoodRen": ("moodboard-v2.html", "fixed"),
+    "LogoA": ("logo-a.html", "fixed"),
+    "LogoB": ("logo-b.html", "fixed"),
+    "LogoC": ("logo-c.html", "fixed"),
+    "LogoMotion": ("logo-motion.html", "fixed"),
 }
 
 FIT_JS = """

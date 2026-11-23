@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Анимации логотипов A, B, C</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&family=Onest:wght@300..800&family=JetBrains+Mono:wght@400;500&family=Cinzel:wght@400..700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#303030}
+.wm{display:inline-flex;align-items:flex-end;line-height:1}
+.wm-g{display:inline-block;height:.7167em;background:currentColor;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%}.wm-t{aspect-ratio:389/430;-webkit-mask-image:url(/_blob/ee25da5eb4234dac2da8a9c76f12d419);mask-image:url(/_blob/ee25da5eb4234dac2da8a9c76f12d419)}.wm-b{aspect-ratio:1795/430;-webkit-mask-image:url(/_blob/990a13dcc9548109e400d3363c575327);mask-image:url(/_blob/990a13dcc9548109e400d3363c575327)}.wm-bb{aspect-ratio:415/430;-webkit-mask-image:url(/_blob/84ef3e58c4728f501b864323de1ea03f);mask-image:url(/_blob/84ef3e58c4728f501b864323de1ea03f)}.wm-full{aspect-ratio:2711/430;-webkit-mask-image:url(/_blob/f4012e54fbdec642b1e9e600bef3986d);mask-image:url(/_blob/f4012e54fbdec642b1e9e600bef3986d)}
+.o{display:inline-block;width:.709em;height:.534em;margin:0 .112em 0 .057em}.o svg{display:block;width:100%;height:100%;overflow:visible}
+.cap{font:500 11px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase}
+.stage{height:470px;position:relative;overflow:hidden;background:#262826;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.fade-in{animation:fadein 6s ease infinite}
+@keyframes fadein{0%,62%{opacity:0;transform:translateY(14px)}74%,94%{opacity:1;transform:none}100%{opacity:0}}
+
+/* A — нимб */
+.a-scene{position:relative;width:240px;height:300px;perspective:700px}
+.a-halo{position:absolute;left:30px;top:40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle at 42% 38%,#E6DDCE 0%,#B8AEA0 55%,#8E8373 100%);box-shadow:inset 0 0 0 3px #8E8373,0 0 60px 6px rgba(184,174,160,.25);transform:translateY(-62px) rotateX(64deg) rotateZ(-10deg) scale(.9);animation:halo 6s cubic-bezier(.6,0,.2,1) infinite}
+.a-halo::after{content:'';position:absolute;inset:18px;border-radius:50%;border:3px dotted #7E7364}
+@keyframes halo{0%{opacity:0;transform:translateY(0) rotateY(0) rotateX(0) scale(.5)}8%{opacity:1}36%{transform:translateY(0) rotateY(720deg) rotateX(0) scale(.85)}56%,94%{opacity:1;transform:translateY(-62px) rotateY(720deg) rotateX(64deg) rotateZ(-10deg) scale(.9)}100%{opacity:0;transform:translateY(-62px) rotateY(720deg) rotateX(64deg) rotateZ(-10deg) scale(.9)}}
+.a-head{position:absolute;left:84px;top:128px;width:72px;height:72px;border-radius:50%;background:#7C8076;animation:head 6s ease infinite}
+.a-body{position:absolute;left:30px;top:208px;width:180px;height:92px;border-radius:90px 90px 0 0;background:#7C8076;animation:head 6s ease infinite}
+@keyframes head{0%,50%{opacity:0}60%,94%{opacity:1}100%{opacity:0}}
+
+/* B — печатная марка */
+.b-seal{position:relative;width:260px;height:260px}
+.b-seal svg{position:absolute;inset:0;width:100%;height:100%}
+.b-ring{stroke-dasharray:604;stroke-dashoffset:0;animation:ring 6s ease infinite}
+@keyframes ring{0%{stroke-dashoffset:604;opacity:1}24%,94%{stroke-dashoffset:0;opacity:1}100%{opacity:0}}
+.b-text{transform-origin:100px 100px;animation:spin 24s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.b-txtfade{animation:txt 6s ease infinite}
+@keyframes txt{0%,10%{opacity:0}30%,94%{opacity:1}100%{opacity:0}}
+.b-stamp{position:absolute;left:50%;top:50%;width:160px;height:160px;margin:-80px 0 0 -80px;border-radius:50%;background:#576257;display:flex;align-items:center;justify-content:center;color:#EFEBE4;animation:stamp 6s cubic-bezier(.5,0,.3,1) infinite}
+@keyframes stamp{0%,28%{opacity:0;transform:scale(1.7) rotate(-14deg)}38%{opacity:1;transform:scale(.94) rotate(0)}44%,94%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+.b-ink{position:absolute;left:50%;top:50%;width:160px;height:160px;margin:-80px 0 0 -80px;border-radius:50%;border:2px solid #576257;opacity:0;animation:ink 6s ease-out infinite}
+@keyframes ink{0%,37%{opacity:0;transform:scale(1)}40%{opacity:.6}60%,100%{opacity:0;transform:scale(1.35)}}
+
+/* C — точка схода */
+.c-scene{position:relative;width:340px;height:230px}
+.c-scene svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.c-line{stroke-dasharray:100;stroke-dashoffset:0;animation:line 6s cubic-bezier(.7,0,.2,1) infinite}
+@keyframes line{0%,4%{stroke-dashoffset:100;opacity:.9}30%{stroke-dashoffset:0;opacity:.9}52%,100%{stroke-dashoffset:0;opacity:0}}
+.c-dot{transform-origin:170px 115px;animation:dot 6s ease infinite}
+@keyframes dot{0%,26%{transform:scale(0)}34%{transform:scale(1.8)}40%,94%{transform:scale(1)}100%{transform:scale(0)}}
+.c-ring{stroke-dasharray:100;stroke-dashoffset:0;animation:cring 6s ease infinite}
+@keyframes cring{0%,38%{stroke-dashoffset:100}58%,94%{stroke-dashoffset:0;opacity:1}100%{opacity:0}}
+.c-l2{animation-delay:.08s}.c-l3{animation-delay:.16s}.c-l4{animation-delay:.24s}
+
+@media (prefers-reduced-motion: reduce){*,*::after{animation:none !important}}
+</style>
+</helmet>
+<div style="width: 1440px; height: 900px; box-sizing: border-box; padding: 48px 56px; background: #303030; color: #EFEBE4; font-family: Onest, system-ui, sans-serif; display: flex; flex-direction: column; gap: 24px">
+  <div style="display: flex; justify-content: space-between; align-items: flex-end">
+    <div style="display: flex; flex-direction: column; gap: 8px"><span class="cap" style="color: #C9C6BF">Анимации логотипа · цикл 6 с</span><h2 style="margin: 0; font-family: 'TT Travels Next', Unbounded, sans-serif; font-weight: 700; font-size: 40px">Как знак появляется на сайте</h2></div>
+    <span style="max-width: 460px; font-size: 14px; line-height: 1.5; color: #C9C6BF">Каждая анимация — это лоадер, около 1,2 с при реальной загрузке. Та же сцена играет в обратную сторону в футере и коротко — при наведении на знак в шапке.</span>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px">
+    <div style="display: flex; flex-direction: column; gap: 12px">
+      <div class="stage">
+        <div class="a-scene" aria-hidden="true"><div class="a-body"></div><div class="a-head"></div><div class="a-halo"></div></div>
+        <div class="wm fade-in" role="img" aria-label="toburo" style="font-size: 52px; margin-top: 26px"><span class="wm-g wm-t"></span><span class="o"><svg viewBox="0 0 120 90" aria-hidden="true"><g transform="rotate(-10 60 45)"><ellipse cx="60" cy="45" rx="57" ry="40" fill="#B8AEA0"></ellipse><ellipse cx="60" cy="45" rx="48" ry="33" fill="none" stroke="#7E7364" stroke-width="2.4" stroke-dasharray="0.1 5.4" stroke-linecap="round"></ellipse></g></svg></span><span class="wm-g wm-b"></span></div>
+      </div>
+      <span class="cap" style="color: #B8AEA0">A · Нимб</span>
+      <span style="font-size: 13px; line-height: 1.45; color: #C9C6BF">Диск-монета крутится, как колесо TOTEM, наклоняется в ракурс и ложится нимбом над фигурой.</span>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 12px">
+      <div class="stage" style="background: #E3DDD3; color: #303030">
+        <div class="b-seal" aria-hidden="true">
+          <svg viewBox="0 0 200 200">
+            <defs><path id="mr1" d="M100 100 m-82 0 a82 82 0 1 1 164 0 a82 82 0 1 1 -164 0"></path></defs>
+            <circle class="b-ring" cx="100" cy="100" r="96" fill="none" stroke="#303030" stroke-width="2.4" transform="rotate(-90 100 100)"></circle>
+            <g class="b-txtfade"><g class="b-text"><text font-family="Cinzel, serif" font-weight="600" font-size="12.5" letter-spacing="4.6" fill="#303030"><textPath href="#mr1">IN OCVLIS OMNIVM · TOBVRO · MMXXVI ·</textPath></text></g></g>
+          </svg>
+          <div class="b-ink"></div>
+          <div class="b-stamp"><div class="wm" style="font-size: 64px; gap: 0.05em"><span class="wm-g wm-t"></span><span class="wm-g wm-bb"></span></div></div>
+        </div>
+        <div class="wm fade-in" role="img" aria-label="toburo" style="font-size: 44px; margin-top: 26px"><span class="wm-g wm-full"></span></div>
+      </div>
+      <span class="cap" style="color: #B8AEA0">B · Печатная марка</span>
+      <span style="font-size: 13px; line-height: 1.45; color: #C9C6BF">Кольцо прорисовывается, девиз набирается и медленно вращается, марка падает штампом, краска расходится.</span>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 12px">
+      <div class="stage" style="background: #262826">
+        <div class="c-scene" aria-hidden="true">
+          <svg viewBox="0 0 340 230">
+            <g stroke="#EFEBE4" stroke-width="1.2" fill="none">
+              <path class="c-line" pathLength="100" d="M0 230 L170 115"></path><path class="c-line c-l2" pathLength="100" d="M340 230 L170 115"></path><path class="c-line c-l3" pathLength="100" d="M85 230 L170 115"></path><path class="c-line c-l4" pathLength="100" d="M255 230 L170 115"></path>
+              <path class="c-line c-l2" pathLength="100" d="M170 230 L170 115"></path><path class="c-line c-l3" pathLength="100" d="M0 0 L170 115"></path><path class="c-line c-l4" pathLength="100" d="M340 0 L170 115"></path><path class="c-line" pathLength="100" d="M0 115 L170 115"></path><path class="c-line c-l2" pathLength="100" d="M340 115 L170 115"></path>
+            </g>
+            <ellipse class="c-ring" pathLength="100" cx="170" cy="115" rx="51" ry="36" fill="none" stroke="#EFEBE4" stroke-width="17"></ellipse>
+            <circle class="c-dot" cx="170" cy="115" r="8" fill="#B8AEA0"></circle>
+          </svg>
+        </div>
+        <div class="wm fade-in" role="img" aria-label="toburo" style="font-size: 52px; margin-top: 22px"><span class="wm-g wm-t"></span><span class="o"><svg viewBox="0 0 120 90" aria-hidden="true"><ellipse cx="60" cy="45" rx="51" ry="36" fill="none" stroke="currentColor" stroke-width="17"></ellipse><circle cx="60" cy="45" r="8" fill="#B8AEA0"></circle></svg></span><span class="wm-g wm-b"></span></div>
+      </div>
+      <span class="cap" style="color: #B8AEA0">C · Точка схода</span>
+      <span style="font-size: 13px; line-height: 1.45; color: #C9C6BF">Линии перспективы стягиваются в точку, точка вспыхивает, вокруг неё смыкается круг и становится «o».</span>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
