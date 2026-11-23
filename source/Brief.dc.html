@@ -10,29 +10,29 @@
 <helmet>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&family=Onest:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-body{margin:0;background:#F3EEE6}
-a{color:#141414}a:hover{color:#D93A12}
-.tb-ch{all:unset;box-sizing:border-box;cursor:pointer;background:#E6DFD3;color:#141414;border:1.5px solid rgba(20,20,20,0.16);padding:18px 20px;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px;font:500 17px Onest,sans-serif;transition:background .2s,border-color .2s}
-.tb-ch:hover{border-color:rgba(20,20,20,0.6);background:#DDD5C8}
-.tb-ch:focus-visible{outline:2px solid #D93A12;outline-offset:3px}
-.tb-ch[aria-pressed="true"]{background:#FF4D1F;color:#141414;border-color:#FF4D1F}
-.tb-big{min-height:112px;flex-direction:column;align-items:flex-start;justify-content:space-between;font:700 22px Unbounded,sans-serif;letter-spacing:-0.02em}
-.tb-in{height:52px;background:transparent;border:0;border-bottom:1.5px solid rgba(20,20,20,0.4);color:#141414;font:400 18px Onest,sans-serif;outline:none;width:100%;box-sizing:border-box}
-.tb-in:focus{border-bottom:2px solid #D93A12}
+body{margin:0;background:#EFEBE4}
+a{color:#303030}a:hover{color:#576257}
+.tb-ch{all:unset;box-sizing:border-box;cursor:pointer;background:#E3DDD3;color:#303030;border:1.5px solid rgba(48,48,48,0.16);padding:18px 20px;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px;font:500 17px Onest,sans-serif;transition:background .2s,border-color .2s}
+.tb-ch:hover{border-color:rgba(48,48,48,0.6);background:#D8D1C5}
+.tb-ch:focus-visible{outline:2px solid #576257;outline-offset:3px}
+.tb-ch[aria-pressed="true"]{background:#576257;color:#EFEBE4;border-color:#576257}
+.tb-big{min-height:112px;flex-direction:column;align-items:flex-start;justify-content:space-between;font:700 22px 'TT Travels Next',Unbounded,sans-serif;letter-spacing:-0.02em}
+.tb-in{height:52px;background:transparent;border:0;border-bottom:1.5px solid rgba(48,48,48,0.4);color:#303030;font:400 18px Onest,sans-serif;outline:none;width:100%;box-sizing:border-box}
+.tb-in:focus{border-bottom:2px solid #576257}
 .tb-in[aria-invalid="true"]{border-bottom:2px solid #B3261E}
-.tb-lab{font-size:13px;color:#6B665E}
-.tb-primary{all:unset;cursor:pointer;background:#FF4D1F;color:#141414;padding:18px 28px;border-radius:999px;font:600 16px Onest,sans-serif}
-.tb-primary:hover{background:#141414;color:#F3EEE6}
-.tb-primary:focus-visible,.tb-ghost:focus-visible{outline:2px solid #141414;outline-offset:3px}
-.tb-ghost{all:unset;cursor:pointer;color:#141414;border:1.5px solid rgba(20,20,20,0.4);padding:16px 26px;border-radius:999px;font:500 16px Onest,sans-serif}
+.tb-lab{font-size:13px;color:#5E665E}
+.tb-primary{all:unset;cursor:pointer;background:#576257;color:#EFEBE4;padding:18px 28px;border-radius:999px;font:600 16px Onest,sans-serif}
+.tb-primary:hover{background:#303030;color:#EFEBE4}
+.tb-primary:focus-visible,.tb-ghost:focus-visible{outline:2px solid #303030;outline-offset:3px}
+.tb-ghost{all:unset;cursor:pointer;color:#303030;border:1.5px solid rgba(48,48,48,0.4);padding:16px 26px;border-radius:999px;font:500 16px Onest,sans-serif}
 </style>
 </helmet>
-<div ref="{{ refs.stage }}" style="width: 1440px; height: 900px; box-sizing: border-box; padding: 64px; background: #F3EEE6; color: #141414; font-family: Onest, system-ui, sans-serif; display: grid; grid-template-columns: 520px 1fr; gap: 80px">
+<div ref="{{ refs.stage }}" style="width: 1440px; height: 900px; box-sizing: border-box; padding: 64px; background: #EFEBE4; color: #303030; font-family: Onest, system-ui, sans-serif; display: grid; grid-template-columns: 520px 1fr; gap: 80px">
 
   <div style="display: flex; flex-direction: column; justify-content: space-between">
     <div style="display: flex; flex-direction: column; gap: 24px">
       <span style="font: 500 12px 'JetBrains Mono', monospace; letter-spacing: 0.14em; color: #3A3834">09 / БРИФ</span>
-      <h2 style="margin: 0; font-family: Unbounded, sans-serif; font-weight: 800; font-size: 64px; line-height: 0.95; letter-spacing: -0.045em">Ваш бренд — <span style="background: #FF4D1F; color: #141414; padding: 0 0.12em">следующий</span> в центре внимания</h2>
+      <h2 style="margin: 0; font-family: 'TT Travels Next', Unbounded, sans-serif; font-weight: 800; font-size: 64px; line-height: 0.95; letter-spacing: -0.045em">Ваш бренд — <span style="background: #576257; color: #EFEBE4; padding: 0 0.12em">следующий</span> в центре внимания</h2>
       <p style="margin: 0; font-size: 18px; line-height: 1.5; color: #3A3834">Четыре коротких шага, около минуты. Вернёмся с идеями и оценкой.</p>
     </div>
     <div style="display: flex; flex-direction: column; gap: 8px; font-size: 16px">
@@ -44,14 +44,14 @@ a{color:#141414}a:hover{color:#D93A12}
 
   <div style="display: flex; flex-direction: column; gap: 36px">
     <div style="display: flex; gap: 8px">
-      <div style="flex: 1; display: flex; flex-direction: column; gap: 8px"><div ref="{{ refs.bar0 }}" style="height: 3px; background: #FF4D1F"></div><span ref="{{ refs.lab0 }}" style="font-size: 13px; color: #141414; font-weight: 600">1 · Направление</span></div>
-      <div style="flex: 1; display: flex; flex-direction: column; gap: 8px"><div ref="{{ refs.bar1 }}" style="height: 3px; background: #D6CDBE"></div><span ref="{{ refs.lab1 }}" style="font-size: 13px; color: #6B665E">2 · Бюджет</span></div>
-      <div style="flex: 1; display: flex; flex-direction: column; gap: 8px"><div ref="{{ refs.bar2 }}" style="height: 3px; background: #D6CDBE"></div><span ref="{{ refs.lab2 }}" style="font-size: 13px; color: #6B665E">3 · Сроки</span></div>
-      <div style="flex: 1; display: flex; flex-direction: column; gap: 8px"><div ref="{{ refs.bar3 }}" style="height: 3px; background: #D6CDBE"></div><span ref="{{ refs.lab3 }}" style="font-size: 13px; color: #6B665E">4 · Контакты</span></div>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 8px"><div ref="{{ refs.bar0 }}" style="height: 3px; background: #576257"></div><span ref="{{ refs.lab0 }}" style="font-size: 13px; color: #303030; font-weight: 600">1 · Направление</span></div>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 8px"><div ref="{{ refs.bar1 }}" style="height: 3px; background: #CFC7BA"></div><span ref="{{ refs.lab1 }}" style="font-size: 13px; color: #5E665E">2 · Бюджет</span></div>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 8px"><div ref="{{ refs.bar2 }}" style="height: 3px; background: #CFC7BA"></div><span ref="{{ refs.lab2 }}" style="font-size: 13px; color: #5E665E">3 · Сроки</span></div>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 8px"><div ref="{{ refs.bar3 }}" style="height: 3px; background: #CFC7BA"></div><span ref="{{ refs.lab3 }}" style="font-size: 13px; color: #5E665E">4 · Контакты</span></div>
     </div>
 
     <fieldset ref="{{ refs.s0 }}" style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 20px">
-      <legend style="padding: 0; margin-bottom: 20px; font-family: Unbounded, sans-serif; font-weight: 700; font-size: 32px; letter-spacing: -0.02em">Что нужно бренду?</legend>
+      <legend style="padding: 0; margin-bottom: 20px; font-family: 'TT Travels Next', Unbounded, sans-serif; font-weight: 700; font-size: 32px; letter-spacing: -0.02em">Что нужно бренду?</legend>
       <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
         <button type="button" class="tb-ch tb-big" data-group="dir" data-multi="1" aria-pressed="false"><span style="font: 500 12px 'JetBrains Mono', monospace">01</span>Инфлюенс</button>
         <button type="button" class="tb-ch tb-big" data-group="dir" data-multi="1" aria-pressed="false"><span style="font: 500 12px 'JetBrains Mono', monospace">02</span>Ивент</button>
@@ -62,7 +62,7 @@ a{color:#141414}a:hover{color:#D93A12}
     </fieldset>
 
     <fieldset ref="{{ refs.s1 }}" style="border: 0; margin: 0; padding: 0; display: none; flex-direction: column; gap: 20px">
-      <legend style="padding: 0; margin-bottom: 20px; font-family: Unbounded, sans-serif; font-weight: 700; font-size: 32px; letter-spacing: -0.02em">Какой бюджет закладываете?</legend>
+      <legend style="padding: 0; margin-bottom: 20px; font-family: 'TT Travels Next', Unbounded, sans-serif; font-weight: 700; font-size: 32px; letter-spacing: -0.02em">Какой бюджет закладываете?</legend>
       <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
         <button type="button" class="tb-ch" data-group="budget" aria-pressed="false">до 500 тыс. ₽</button>
         <button type="button" class="tb-ch" data-group="budget" aria-pressed="false">0,5–1,5 млн ₽</button>
@@ -73,7 +73,7 @@ a{color:#141414}a:hover{color:#D93A12}
     </fieldset>
 
     <fieldset ref="{{ refs.s2 }}" style="border: 0; margin: 0; padding: 0; display: none; flex-direction: column; gap: 20px">
-      <legend style="padding: 0; margin-bottom: 20px; font-family: Unbounded, sans-serif; font-weight: 700; font-size: 32px; letter-spacing: -0.02em">Когда запускаемся?</legend>
+      <legend style="padding: 0; margin-bottom: 20px; font-family: 'TT Travels Next', Unbounded, sans-serif; font-weight: 700; font-size: 32px; letter-spacing: -0.02em">Когда запускаемся?</legend>
       <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
         <button type="button" class="tb-ch" data-group="time" aria-pressed="false">Срочно, до 2 недель</button>
         <button type="button" class="tb-ch" data-group="time" aria-pressed="false">В течение месяца</button>
@@ -84,28 +84,28 @@ a{color:#141414}a:hover{color:#D93A12}
     </fieldset>
 
     <fieldset ref="{{ refs.s3 }}" style="border: 0; margin: 0; padding: 0; display: none; flex-direction: column; gap: 20px">
-      <legend style="padding: 0; margin-bottom: 20px; font-family: Unbounded, sans-serif; font-weight: 700; font-size: 32px; letter-spacing: -0.02em">Как с вами связаться?</legend>
+      <legend style="padding: 0; margin-bottom: 20px; font-family: 'TT Travels Next', Unbounded, sans-serif; font-weight: 700; font-size: 32px; letter-spacing: -0.02em">Как с вами связаться?</legend>
       <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 24px">
         <div style="display: flex; flex-direction: column; gap: 8px"><label for="bname" class="tb-lab">Имя *</label><input ref="{{ refs.name }}" id="bname" class="tb-in" autocomplete="name"></div>
         <div style="display: flex; flex-direction: column; gap: 8px"><label for="bco" class="tb-lab">Бренд или компания</label><input id="bco" class="tb-in" autocomplete="organization"></div>
         <div style="display: flex; flex-direction: column; gap: 8px"><label for="bcon" class="tb-lab">Telegram или телефон *</label><input ref="{{ refs.contact }}" id="bcon" class="tb-in"></div>
         <div style="display: flex; flex-direction: column; gap: 8px"><label for="bmail" class="tb-lab">Email</label><input id="bmail" type="email" class="tb-in" autocomplete="email"></div>
         <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 8px"><label for="bmsg" class="tb-lab">Пара слов о задаче</label><input id="bmsg" class="tb-in"></div>
-        <label style="grid-column: span 2; display: flex; gap: 12px; align-items: center; font-size: 14px; color: #3A3834"><input ref="{{ refs.consent }}" type="checkbox" style="width: 20px; height: 20px; accent-color: #D93A12; margin: 0">Согласен на обработку персональных данных *</label>
+        <label style="grid-column: span 2; display: flex; gap: 12px; align-items: center; font-size: 14px; color: #3A3834"><input ref="{{ refs.consent }}" type="checkbox" style="width: 20px; height: 20px; accent-color: #576257; margin: 0">Согласен на обработку персональных данных *</label>
       </div>
       <span ref="{{ refs.err3 }}" style="font-size: 14px; color: #B3261E; visibility: hidden">Заполните имя, контакт и согласие</span>
     </fieldset>
 
     <div ref="{{ refs.done }}" style="display: none; flex-direction: column; gap: 20px; padding-top: 20px">
-      <div style="width: 72px; height: 72px; border-radius: 50%; background: #FF4D1F"></div>
-      <span style="font-family: Unbounded, sans-serif; font-weight: 800; font-size: 48px; line-height: 1; letter-spacing: -0.04em">Бриф у нас</span>
+      <div style="width: 72px; height: 72px; border-radius: 50%; background: #576257"></div>
+      <span style="font-family: 'TT Travels Next', Unbounded, sans-serif; font-weight: 800; font-size: 48px; line-height: 1; letter-spacing: -0.04em">Бриф у нас</span>
       <p style="margin: 0; font-size: 18px; line-height: 1.5; color: #3A3834; max-width: 520px">Ответим в течение [N] часов в рабочее время. Если горит — напишите в Telegram.</p>
     </div>
 
     <div ref="{{ refs.nav }}" style="margin-top: auto; display: flex; gap: 12px; align-items: center">
       <button ref="{{ refs.back }}" type="button" class="tb-ghost" style="visibility: hidden">← Назад</button>
       <button ref="{{ refs.next }}" type="button" class="tb-primary">Дальше</button>
-      <span ref="{{ refs.step }}" style="margin-left: auto; font: 500 12px 'JetBrains Mono', monospace; color: #6B665E">ШАГ 1 / 4</span>
+      <span ref="{{ refs.step }}" style="margin-left: auto; font: 500 12px 'JetBrains Mono', monospace; color: #5E665E">ШАГ 1 / 4</span>
     </div>
   </div>
 </div>
@@ -129,8 +129,8 @@ class Component extends DCLogic {
     var paint = function () {
       for (var i = 0; i < 4; i++) {
         R['s' + i].style.display = i === step ? 'flex' : 'none';
-        R['bar' + i].style.background = i < step ? '#141414' : (i === step ? '#FF4D1F' : '#D6CDBE');
-        R['lab' + i].style.color = i === step ? '#141414' : (i < step ? '#3A3834' : '#6B665E'); R['lab' + i].style.fontWeight = i === step ? '600' : '400';
+        R['bar' + i].style.background = i < step ? '#303030' : (i === step ? '#576257' : '#CFC7BA');
+        R['lab' + i].style.color = i === step ? '#303030' : (i < step ? '#3A3834' : '#5E665E'); R['lab' + i].style.fontWeight = i === step ? '600' : '400';
       }
       R.done.style.display = step === 4 ? 'flex' : 'none';
       R.nav.style.display = step === 4 ? 'none' : 'flex';

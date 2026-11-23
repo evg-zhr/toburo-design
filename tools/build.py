@@ -10,6 +10,13 @@ from pathlib import Path
 
 LIVE = {"home.html": "js/live-home.js", "case.html": "js/live-case.js"}
 
+# ассеты холста (/_blob/<id>) -> файлы превью
+BLOBS = {
+    "/_blob/ee25da5eb4234dac2da8a9c76f12d419": "img/wm-t.png",
+    "/_blob/990a13dcc9548109e400d3363c575327": "img/wm-buro.png",
+    "/_blob/da99a2c5c3c2810c125d5cbd63eb39ec": "img/tt-specimen.png",
+}
+
 PAGES = {
     "Main": ("moodboard.html", "fixed"),
     "ConceptA": ("concept-a.html", "fixed"),
@@ -63,6 +70,11 @@ def convert(src, mode, live=None):
     body = re.sub(r'ref="\{\{ refs\.(\w+) \}\}"', r'data-ref="\1"', body)
     for stem, (out, _) in PAGES.items():
         body = body.replace('href="%s.dc.html"' % stem, 'href="%s"' % out)
+    for blob, local in BLOBS.items():
+        body = body.replace(blob, local)
+        helmet = helmet.replace(blob, local)
+    if "/_blob/" in body + helmet:
+        raise SystemExit("unmapped asset in " + title)
     if "{{" in body:
         raise SystemExit("unresolved template hole in " + title)
 
@@ -97,6 +109,9 @@ def main():
     (out_dir / "js").mkdir(exist_ok=True)
     for js in (Path(__file__).parent / "live").glob("*.js"):
         shutil.copy(js, out_dir / "js" / js.name)
+    (out_dir / "img").mkdir(exist_ok=True)
+    for png in (Path(__file__).parent / "img").glob("*.png"):
+        shutil.copy(png, out_dir / "img" / png.name)
     for stem, (out, mode) in PAGES.items():
         html = convert((src_dir / (stem + ".dc.html")).read_text(encoding="utf-8"), mode, LIVE.get(out))
         (out_dir / out).write_text(html, encoding="utf-8")
