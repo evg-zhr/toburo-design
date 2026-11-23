@@ -4,8 +4,11 @@
 Запуск: python3 tools/build.py <папка с .dc.html> <папка вывода>
 """
 import re
+import shutil
 import sys
 from pathlib import Path
+
+LIVE = {"home.html": "js/live-home.js", "case.html": "js/live-case.js"}
 
 PAGES = {
     "Main": ("moodboard.html", "fixed"),
@@ -52,7 +55,7 @@ def section(src, tag):
     return m.group(1) if m else ""
 
 
-def convert(src, mode):
+def convert(src, mode, live=None):
     title = re.search(r"<title>(.*?)</title>", src, re.S).group(1)
     xdc = section(src, "x-dc")
     helmet = section(xdc, "helmet")
@@ -82,15 +85,20 @@ def convert(src, mode):
         "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n"
         "<meta name=\"robots\" content=\"noindex\">\n"
         "<title>" + title + "</title>\n" + helmet + "\n<style>" + extra_css + "</style>\n</head>\n<body>\n"
-        + body + "\n" + BADGE + "\n" + script + "\n</body>\n</html>\n"
+        + body + "\n" + BADGE + "\n" + script
+        + ('\n<script src="' + live + '"></script>' if live else "")
+        + "\n</body>\n</html>\n"
     )
 
 
 def main():
     src_dir, out_dir = Path(sys.argv[1]), Path(sys.argv[2])
     out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "js").mkdir(exist_ok=True)
+    for js in (Path(__file__).parent / "live").glob("*.js"):
+        shutil.copy(js, out_dir / "js" / js.name)
     for stem, (out, mode) in PAGES.items():
-        html = convert((src_dir / (stem + ".dc.html")).read_text(encoding="utf-8"), mode)
+        html = convert((src_dir / (stem + ".dc.html")).read_text(encoding="utf-8"), mode, LIVE.get(out))
         (out_dir / out).write_text(html, encoding="utf-8")
         print("built", out)
 
