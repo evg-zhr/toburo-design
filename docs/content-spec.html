@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ТЗ на контент кейсов toburo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&family=Onest:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F2F0EB}
+.cap{font:500 12px 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#5E5A53}
+.h{margin:0;font-family:Unbounded,sans-serif;font-weight:800;font-size:32px;letter-spacing:-0.03em;line-height:1.05}
+.row{display:grid;grid-template-columns:260px 1fr 1fr;gap:24px;padding:14px 0;border-top:1px solid rgba(14,14,14,0.16);font-size:15px;line-height:1.5}
+.row b{font-weight:600}
+.k{font:500 13px 'JetBrains Mono',monospace;color:#3A3834}
+li{margin:0}
+</style>
+
+<style>html,body{margin:0}</style>
+</head>
+<body>
+<div id="tb-fit" style="overflow:hidden"><div style="width: 1440px; height: 2900px; box-sizing: border-box; padding: 64px; background: #F2F0EB; color: #0E0E0E; font-family: Onest, system-ui, sans-serif; display: flex; flex-direction: column; gap: 56px">
+
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 40px">
+    <div style="display: flex; flex-direction: column; gap: 16px">
+      <span class="cap">Техническое задание на контент</span>
+      <h2 style="margin: 0; font-family: Unbounded, sans-serif; font-weight: 800; font-size: 72px; line-height: 0.92; letter-spacing: -0.045em">Кейсы как серия</h2>
+    </div>
+    <p style="margin: 0; max-width: 520px; font-size: 18px; line-height: 1.5">Для съёмки и сборки 4–6 кейсов. Один формат на всех: тогда список кейсов выглядит как одна выставка, а не набор отчётов.</p>
+  </div>
+
+  <section style="display: flex; flex-direction: column; gap: 8px">
+    <h3 class="h" style="margin-bottom: 12px">1. Видео</h3>
+    <div class="row" style="font: 500 12px 'JetBrains Mono', monospace; color: #5E5A53; letter-spacing: 0.08em"><span>ЧТО</span><span>DESKTOP</span><span>MOBILE</span></div>
+    <div class="row"><b>Карточка в списке — луп</b><span>6–8 с, бесшовная склейка, 4:5, 1080×1350, 25 fps, без звука. MP4 H.264 + WebM VP9, ≤ 2,5 МБ. Постер — первый кадр, AVIF ≤ 120 КБ.</span><span>Тот же луп 4:5 в 720×900, ≤ 1,2 МБ. Стартует только в зоне видимости, по одному за раз.</span></div>
+    <div class="row"><b>Обложка кейса — луп</b><span>10–15 с, 16:9, 1920×1080 (+ 2560×1440 для больших экранов), ≤ 6 МБ, адаптивный битрейт. В центре кадра — 30 % «тихой» зоны под логотип клиента.</span><span>Отдельный монтаж 9:16, 1080×1920, ≤ 3 МБ. Не кроп из 16:9: снимать с запасом под вертикаль.</span></div>
+    <div class="row"><b>Hover-видео услуг</b><span>3 лупа по 4–6 с: инфлюенс (выходы блогеров), ивенты (свет, гости, сцена), продакшн (бэкстейдж). 4:5, ≤ 1,5 МБ.</span><span>Показываются внутри раскрытой строки, грузятся по тапу.</span></div>
+    <div class="row"><b>Вертикальные ролики</b><span>3–6 reels / клипов блогеров на кейс, оригиналы 9:16 без вотермарков площадок, с письменным согласием автора.</span><span>Лента со свайпом, первый ролик — постер до тапа.</span></div>
+  </section>
+
+  <section style="display: flex; flex-direction: column; gap: 8px">
+    <h3 class="h" style="margin-bottom: 12px">2. Фото — 12–20 кадров на кейс</h3>
+    <div class="row"><b>Ключевой визуал</b><span>1 кадр, 16:9, от 3840×2160. Главный герой + бренд в одном кадре, читается без подписи.</span><span>Должен кадрироваться в 4:5 без потери смысла.</span></div>
+    <div class="row"><b>Общие планы / сцена</b><span>4–6 кадров: площадка, масштаб, свет, толпа.</span><span>Широкий угол 24–35 мм.</span></div>
+    <div class="row"><b>Портреты</b><span>4–6 кадров 4:5: блогеры, гости, лица кампании — крупно, взгляд в камеру или в действие.</span><span>50–85 мм, живая эмоция, без постановочных улыбок.</span></div>
+    <div class="row"><b>Детали / продукт</b><span>3–4 кадра: продукт бренда, фактуры, руки, свет.</span><span>Макро и крупные планы.</span></div>
+    <div class="row"><b>Бэкстейдж и эмоция</b><span>2–4 кадра: команда в работе, реакция гостей, момент «вау».</span><span>Репортажно, без постановки.</span></div>
+    <div class="row"><b>Сдача</b><span>Исходники RAW + экспорт 3200 px по длинной стороне, sRGB. Сайт сам делает AVIF / WebP ≤ 350 КБ.</span><span>Логотип клиента — отдельно, SVG.</span></div>
+  </section>
+
+  <section style="display: flex; flex-direction: column; gap: 8px">
+    <h3 class="h" style="margin-bottom: 12px">3. Метрики — как показываем</h3>
+    <div class="row"><b>Главная цифра</b><span>Одна на кейс — на карточке и обложке (оранжевый чип). Самая сильная для задачи: охват, гости, ER или продажи.</span><span class="k">[N] млн охват</span></div>
+    <div class="row"><b>Блок «Результат»</b><span>3 крупные метрики + до 4 второстепенных. К каждой — сравнение: с планом, прошлым периодом или бенчмарком категории.</span><span class="k">×2,3 к плану · ER 7,1 % при бенчмарке 3 %</span></div>
+    <div class="row"><b>Набор на выбор</b><span>Уникальный охват · просмотры · ER · вовлечения · гости / участники · UGC и публикации · переходы и клики · CPV / CPM · лиды и продажи, если клиент разрешил.</span><span>Не больше 7 цифр на кейс.</span></div>
+    <div class="row"><b>Правила</b><span>У каждой цифры — источник и период. Без «≈» и «более» без основания. Округление до 2 значащих цифр. Проценты — с запятой.</span><span class="k">Источник: статистика VK, 01.03–31.03.2026</span></div>
+  </section>
+
+  <section style="display: flex; flex-direction: column; gap: 8px">
+    <h3 class="h" style="margin-bottom: 12px">4. Единый стиль съёмки и обработки</h3>
+    <div class="row"><b>Свет</b><span>Направленный, контрастный: софит, вспышка, прожектор. Глубокие тени — продолжение темы «центр внимания».</span><span>Избегать плоского офисного света.</span></div>
+    <div class="row"><b>Цвет</b><span>Один LUT на все кейсы (рабочее имя toburo_night): глубокие чёрные, естественная кожа, слегка тёплые света, зерно 3–5 %.</span><span>Брендовые цвета клиента не перекрашиваем.</span></div>
+    <div class="row"><b>Композиция</b><span>Герой в центре или на линии трети, вокруг — воздух. Снимать с запасом: каждый кадр должен жить и в 16:9, и в 9:16.</span><span>Безопасная зона под текст — нижняя треть.</span></div>
+    <div class="row"><b>Чего нет</b><span>Стока, коллажей, рамок, вотермарков, текста поверх фото, фильтров соцсетей.</span><span>Подписи делает сайт.</span></div>
+  </section>
+
+  <section style="display: flex; flex-direction: column; gap: 8px">
+    <h3 class="h" style="margin-bottom: 12px">5. Тексты кейса</h3>
+    <div class="row"><b>Название</b><span>До 6 слов, про результат или идею, не про формат.</span><span>«Вывели X в топ…», а не «Интеграция у блогеров».</span></div>
+    <div class="row"><b>Задача · Идея</b><span>Задача — до 300 знаков. Идея — до 400 знаков, один инсайт.</span><span>Без канцелярита.</span></div>
+    <div class="row"><b>Реализация · Отзыв</b><span>3–5 пунктов по одной строке. Цитата клиента — до 200 знаков, с согласованием.</span><span>Отзыв опционален.</span></div>
+  </section>
+
+  <section style="display: flex; flex-direction: column; gap: 20px; background: #0E0E0E; color: #F2F0EB; padding: 40px">
+    <h3 class="h">6. Что нужно от заказчика до старта вёрстки</h3>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 40px; font-size: 15px; line-height: 1.5">
+      <ul style="margin: 0; padding: 0 0 0 18px; display: flex; flex-direction: column; gap: 8px">
+        <li>Решение по вордмарку: дорабатываем предложенный «t●buro» или есть свой</li>
+        <li>Домен и почта после ребрендинга (остаётся ли info@totemburo.ru)</li>
+        <li>Цифры для счётчиков с источником: проекты, охват, блогеры в сети, бренды</li>
+        <li>Вилки бюджетов для брифа — подтвердить или заменить</li>
+      </ul>
+      <ul style="margin: 0; padding: 0 0 0 18px; display: flex; flex-direction: column; gap: 8px">
+        <li>Логотипы клиентов и партнёров в SVG + разрешение на публикацию</li>
+        <li>4–6 кейсов по этому ТЗ; первые 2 — для запуска</li>
+        <li>Аватары, ники, тематики, охваты блогеров для «Сети талантов» + согласия на лица</li>
+        <li>Фото команды 4:5 в едином свете, если блок «Команда» нужен</li>
+      </ul>
+      <ul style="margin: 0; padding: 0 0 0 18px; display: flex; flex-direction: column; gap: 8px">
+        <li>Ссылки на соцсети агентства</li>
+        <li>Юрлицо, ИНН и политика обработки ПДн (152-ФЗ) для футера и формы</li>
+        <li>Куда уходит бриф: почта, Telegram-бот или CRM</li>
+        <li>Кадры съёмок и ивентов для hero-атласа: 12–24 фото, лица и сцены</li>
+      </ul>
+    </div>
+  </section>
+</div></div>
+<a href="index.html" style="position:fixed;left:12px;bottom:12px;z-index:99;background:rgba(14,14,14,.72);color:#F2F0EB;border:1px solid rgba(242,240,235,.3);border-radius:999px;padding:8px 14px;font:500 12px/1 'JetBrains Mono',monospace;text-decoration:none;backdrop-filter:blur(6px)">← toburo · все материалы</a>
+<script>
+(function(){
+  var box = document.getElementById('tb-fit'), root = box.firstElementChild;
+  function fit(){
+    var w = root.offsetWidth, k = Math.min(1, (window.innerWidth) / w);
+    root.style.transform = k < 1 ? 'scale(' + k + ')' : '';
+    root.style.transformOrigin = '0 0';
+    box.style.height = (root.offsetHeight * k) + 'px';
+    box.style.width = (w * k) + 'px';
+  }
+  window.addEventListener('resize', fit); fit();
+  if (document.fonts) document.fonts.ready.then(fit);
+})();
+</script>
+</body>
+</html>

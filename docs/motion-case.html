@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Motion — переход из списка в кейс</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&family=Onest:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3EEE6}
+a{color:#141414}a:hover{color:#D93A12}
+.tb-card{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:14px;width:340px;flex:none}
+.tb-card:focus-visible{outline:2px solid #D93A12;outline-offset:4px}
+.tb-media{height:420px;position:relative;overflow:hidden;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.tb-card:hover .tb-media{transform:scale(0.97)}
+.tb-tag{border:1px solid rgba(20,20,20,0.4);border-radius:999px;padding:4px 10px;font-size:12px}
+</style>
+
+<style>html,body{margin:0}</style>
+</head>
+<body>
+<div id="tb-fit" style="overflow:hidden"><div data-ref="stage" style="width: 1440px; height: 900px; box-sizing: border-box; padding: 56px 0 56px 64px; position: relative; overflow: hidden; background: #F3EEE6; color: #141414; font-family: Onest, system-ui, sans-serif">
+
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; padding-right: 64px; margin-bottom: 40px">
+    <div style="display: flex; flex-direction: column; gap: 16px">
+      <h2 style="margin: 0; font: 500 12px 'JetBrains Mono', monospace; letter-spacing: 0.14em; color: #3A3834">03 / КЕЙСЫ</h2>
+      <p style="margin: 0; font-family: Unbounded, sans-serif; font-weight: 800; font-size: 64px; line-height: 0.95; letter-spacing: -0.04em">Где мы уже<br>держали свет</p>
+    </div>
+    <span style="font: 500 11px 'JetBrains Mono', monospace; letter-spacing: 0.1em; color: #6B665E">КЛИК ПО КАРТОЧКЕ — РАСКРЫТИЕ БЕЗ ПЕРЕЗАГРУЗКИ</span>
+  </div>
+
+  <div style="display: flex; gap: 24px">
+    <button data-ref="card0" type="button" class="tb-card">
+      <div class="tb-media" style="background: #2E2C29"><span style="position: absolute; left: 14px; top: 12px; font: 500 11px 'JetBrains Mono', monospace; color: #C9C6BF">ВИДЕО-ЛУП 9:16 / 4:5</span><span style="position: absolute; right: 14px; bottom: 12px; background: #F2F0EB; color: #141414; border-radius: 999px; padding: 4px 10px; font-size: 12px; font-weight: 600">[N] млн охват</span></div>
+      <span style="font: 500 12px 'JetBrains Mono', monospace; color: #6B665E">[КЛИЕНТ 1] · [ГОД]</span>
+      <span style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 24px; line-height: 1.1; letter-spacing: -0.02em">[Название кейса — до 6 слов]</span>
+      <span style="display: flex; gap: 6px"><span class="tb-tag">Инфлюенс</span><span class="tb-tag">Продакшн</span></span>
+    </button>
+    <button data-ref="card1" type="button" class="tb-card">
+      <div class="tb-media" style="background: #2B2A33"><span style="position: absolute; left: 14px; top: 12px; font: 500 11px 'JetBrains Mono', monospace; color: #C9C6BF">ВИДЕО-ЛУП 9:16 / 4:5</span><span style="position: absolute; right: 14px; bottom: 12px; background: #F2F0EB; color: #141414; border-radius: 999px; padding: 4px 10px; font-size: 12px; font-weight: 600">[N] гостей</span></div>
+      <span style="font: 500 12px 'JetBrains Mono', monospace; color: #6B665E">[КЛИЕНТ 2] · [ГОД]</span>
+      <span style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 24px; line-height: 1.1; letter-spacing: -0.02em">[Название кейса — до 6 слов]</span>
+      <span style="display: flex; gap: 6px"><span class="tb-tag">Ивент</span></span>
+    </button>
+    <button data-ref="card2" type="button" class="tb-card">
+      <div class="tb-media" style="background: #3A2C26"><span style="position: absolute; left: 14px; top: 12px; font: 500 11px 'JetBrains Mono', monospace; color: #C9C6BF">ВИДЕО-ЛУП 9:16 / 4:5</span><span style="position: absolute; right: 14px; bottom: 12px; background: #F2F0EB; color: #141414; border-radius: 999px; padding: 4px 10px; font-size: 12px; font-weight: 600">ER [N]%</span></div>
+      <span style="font: 500 12px 'JetBrains Mono', monospace; color: #6B665E">[КЛИЕНТ 3] · [ГОД]</span>
+      <span style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 24px; line-height: 1.1; letter-spacing: -0.02em">[Название кейса — до 6 слов]</span>
+      <span style="display: flex; gap: 6px"><span class="tb-tag">Продакшн</span></span>
+    </button>
+    <button data-ref="card3" type="button" class="tb-card">
+      <div class="tb-media" style="background: #262A24"><span style="position: absolute; left: 14px; top: 12px; font: 500 11px 'JetBrains Mono', monospace; color: #C9C6BF">ВИДЕО-ЛУП 9:16 / 4:5</span><span style="position: absolute; right: 14px; bottom: 12px; background: #F2F0EB; color: #141414; border-radius: 999px; padding: 4px 10px; font-size: 12px; font-weight: 600">[N] публикаций</span></div>
+      <span style="font: 500 12px 'JetBrains Mono', monospace; color: #6B665E">[КЛИЕНТ 4] · [ГОД]</span>
+      <span style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 24px; line-height: 1.1; letter-spacing: -0.02em">[Название кейса — до 6 слов]</span>
+      <span style="display: flex; gap: 6px"><span class="tb-tag">Инфлюенс</span><span class="tb-tag">Ивент</span></span>
+    </button>
+  </div>
+
+  <div data-ref="ov" style="position: absolute; left: 0; top: 0; width: 0; height: 0; overflow: hidden; display: none; background: #2E2C29; color: #F2F0EB; z-index: 5">
+    <div data-ref="ovin" style="position: absolute; inset: 0; opacity: 0; transition: opacity .4s ease; display: flex; flex-direction: column; justify-content: space-between; padding: 40px 48px 48px">
+      <div style="display: flex; justify-content: space-between; align-items: center">
+        <button data-ref="close" type="button" style="background: rgba(20,20,20,0.6); color: #F2F0EB; border: 1px solid rgba(242,240,235,0.4); border-radius: 999px; padding: 12px 20px; font: 500 14px Onest, sans-serif; cursor: pointer">← Все кейсы</button>
+        <span style="font: 500 11px 'JetBrains Mono', monospace; color: #C9C6BF">ОБЛОЖКА · ВИДЕО-ЛУП 16:9, 10–15 С</span>
+      </div>
+      <div style="position: absolute; left: 50%; top: 42%; width: 120px; height: 120px; margin: -60px; border-radius: 50%; background: radial-gradient(circle, rgba(242,240,235,0.9) 0%, rgba(242,240,235,0.25) 35%, rgba(242,240,235,0) 70%); display: flex; align-items: center; justify-content: center"><span style="font: 600 12px 'JetBrains Mono', monospace; color: #141414">[ЛОГО]</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 40px">
+        <div style="display: flex; flex-direction: column; gap: 16px">
+          <span data-ref="ovclient" style="font: 500 13px 'JetBrains Mono', monospace; letter-spacing: 0.1em">[КЛИЕНТ 1] · [ГОД]</span>
+          <span style="font-family: Unbounded, sans-serif; font-weight: 800; font-size: 88px; line-height: 0.92; letter-spacing: -0.045em; max-width: 1000px">[Название кейса — до 6 слов]</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px; align-items: flex-end">
+          <span style="font: 500 12px 'JetBrains Mono', monospace; color: #C9C6BF">СКРОЛЛ ↓ ЗАДАЧА</span>
+          <span data-ref="ovmetric" style="background: #FF4D1F; color: #141414; border-radius: 999px; padding: 8px 16px; font-weight: 600; font-size: 15px">[N] млн охват</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+<a href="index.html" style="position:fixed;left:12px;bottom:12px;z-index:99;background:rgba(14,14,14,.72);color:#F2F0EB;border:1px solid rgba(242,240,235,.3);border-radius:999px;padding:8px 14px;font:500 12px/1 'JetBrains Mono',monospace;text-decoration:none;backdrop-filter:blur(6px)">← toburo · все материалы</a>
+<script>
+(function(){
+var R = {};
+document.querySelectorAll('[data-ref]').forEach(function(el){ R[el.getAttribute('data-ref')] = el; });
+(function(R){
+    var st = R.stage, cur = -1, timers = [];
+    var tints = ['#2E2C29', '#2B2A33', '#3A2C26', '#262A24'];
+    var metrics = ['[N] млн охват', '[N] гостей', 'ER [N]%', '[N] публикаций'];
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var dur = reduce ? 0 : 700;
+    var later = function (fn, ms) { timers.push(setTimeout(fn, ms)); };
+    var rectOf = function (el) {
+      var s = st.getBoundingClientRect(), r = el.querySelector('.tb-media').getBoundingClientRect(), k = st.offsetWidth / s.width;
+      return { l: (r.left - s.left) * k, t: (r.top - s.top) * k, w: r.width * k, h: r.height * k };
+    };
+    var place = function (b) { R.ov.style.left = b.l + 'px'; R.ov.style.top = b.t + 'px'; R.ov.style.width = b.w + 'px'; R.ov.style.height = b.h + 'px'; };
+    var openCase = function (i) {
+      if (cur !== -1) return;
+      cur = i;
+      R.ov.style.transition = 'none';
+      R.ov.style.background = tints[i];
+      R.ovclient.textContent = '[КЛИЕНТ ' + (i + 1) + '] · [ГОД]';
+      R.ovmetric.textContent = metrics[i];
+      place(rectOf(R['card' + i]));
+      R.ov.style.display = 'block';
+      void R.ov.offsetWidth;
+      R.ov.style.transition = 'left ' + dur + 'ms cubic-bezier(.7,0,.2,1), top ' + dur + 'ms cubic-bezier(.7,0,.2,1), width ' + dur + 'ms cubic-bezier(.7,0,.2,1), height ' + dur + 'ms cubic-bezier(.7,0,.2,1)';
+      place({ l: 0, t: 0, w: st.offsetWidth, h: st.offsetHeight });
+      later(function () { R.ovin.style.opacity = 1; R.close.focus(); }, dur * 0.7);
+    };
+    var closeCase = function () {
+      if (cur === -1) return;
+      var i = cur;
+      R.ovin.style.opacity = 0;
+      later(function () {
+        place(rectOf(R['card' + i]));
+        later(function () { R.ov.style.display = 'none'; cur = -1; R['card' + i].focus(); }, dur);
+      }, reduce ? 0 : 250);
+    };
+    var handlers = [0, 1, 2, 3].map(function (i) { var h = function () { openCase(i); }; R['card' + i].addEventListener('click', h); return h; });
+    R.close.addEventListener('click', closeCase);
+    return function () {
+      timers.forEach(clearTimeout);
+      handlers.forEach(function (h, i) { R['card' + i].removeEventListener('click', h); });
+      R.close.removeEventListener('click', closeCase);
+    };
+    })(R);
+})();
+</script><script>
+(function(){
+  var box = document.getElementById('tb-fit'), root = box.firstElementChild;
+  function fit(){
+    var w = root.offsetWidth, k = Math.min(1, (window.innerWidth) / w);
+    root.style.transform = k < 1 ? 'scale(' + k + ')' : '';
+    root.style.transformOrigin = '0 0';
+    box.style.height = (root.offsetHeight * k) + 'px';
+    box.style.width = (w * k) + 'px';
+  }
+  window.addEventListener('resize', fit); fit();
+  if (document.fonts) document.fonts.ready.then(fit);
+})();
+</script>
+</body>
+</html>

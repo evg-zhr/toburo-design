@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>toburo — шаблон страницы кейса</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&family=Onest:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3EEE6}
+a{color:#141414}a:hover{color:#D93A12}
+.cap{font:500 12px 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#3A3834}
+.ph{position:relative;background:#2A2927;color:#F2F0EB}
+.phl{position:absolute;left:14px;top:12px;font:500 11px 'JetBrains Mono',monospace;color:#3A3834;text-transform:uppercase;letter-spacing:.04em;color:#C9C6BF}
+.btn{display:inline-block;background:#FF4D1F;color:#141414 !important;text-decoration:none;padding:18px 28px;border-radius:999px;font-weight:600;font-size:16px}
+.btn:hover{background:#141414;color:#F3EEE6 !important}
+.tag{border:1px solid rgba(20,20,20,0.5);border-radius:999px;padding:6px 12px;font-size:13px}
+.wrap{max-width:1440px;margin:0 auto;box-sizing:border-box;padding-left:clamp(20px,4.4vw,64px);padding-right:clamp(20px,4.4vw,64px)}
+.dk{color:#F2F0EB}.dk a{color:#F2F0EB}.dk a:hover{color:#FF4D1F}.dk .cap{color:#C9C6BF}.dk .ghost{border-color:rgba(242,240,235,.5)}.dk .tag{border-color:rgba(242,240,235,.5)}.dk .tcap{color:#C9C6BF}.dk .btn:hover{background:#F3EEE6;color:#141414 !important}
+</style>
+</helmet>
+<div style="background: #F3EEE6; color: #141414; font-family: Onest, system-ui, sans-serif; overflow: hidden">
+
+  <section aria-label="Обложка кейса" class="dk" style="background: #141414; color: #F2F0EB; position: relative; min-height: 860px; background: #2E2C29; display: flex; flex-direction: column">
+    <span class="phl" style="left: auto; right: clamp(20px, 3.4vw, 48px); top: 96px">Обложка · видео-луп 16:9 (моб. 9:16), 10–15 с, без звука</span>
+    <div aria-hidden="true" style="position: absolute; left: 50%; top: 40%; width: 220px; height: 220px; margin: -110px; border-radius: 50%; background: radial-gradient(circle, rgba(242,240,235,0.9) 0%, rgba(242,240,235,0.3) 35%, rgba(242,240,235,0) 70%); display: flex; align-items: center; justify-content: center"><span style="font: 600 13px 'JetBrains Mono', monospace; color: #141414">[ЛОГО КЛИЕНТА]</span></div>
+    <div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 480px; background: linear-gradient(0deg, rgba(20,20,20,0.92) 0%, rgba(20,20,20,0.6) 50%, rgba(20,20,20,0) 100%)"></div>
+    <header style="position: relative; max-width: 1440px; width: 100%; margin: 0 auto; box-sizing: border-box; padding: 28px clamp(20px, 3.4vw, 48px); display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px">
+      <a href="HomeDesktop.dc.html" aria-label="toburo — на главную" style="text-decoration: none; font-family: Unbounded, sans-serif; font-weight: 800; font-size: 26px; letter-spacing: -0.045em; display: flex; align-items: baseline"><span>t</span><span style="display: inline-block; width: 0.6em; height: 0.6em; border-radius: 50%; background: #FF4D1F; margin: 0 0.02em 0 0.03em"></span><span>buro</span></a>
+      <a href="HomeDesktop.dc.html" style="background: rgba(20,20,20,0.6); text-decoration: none; border: 1px solid rgba(242,240,235,0.4); border-radius: 999px; padding: 10px 18px; font-size: 14px">← Все кейсы</a>
+      <a href="#brief" class="btn" style="margin-left: auto; padding: 12px 20px; font-size: 14px">Заполнить бриф</a>
+    </header>
+    <div class="wrap" style="position: relative; margin-top: auto; width: 100%; padding-bottom: 56px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px 48px">
+      <div style="flex: 1 1 700px; display: flex; flex-direction: column; gap: 20px">
+        <span class="cap" style="color: #F2F0EB">[Клиент] · [Год] · [Город]</span>
+        <h1 style="margin: 0; font-family: Unbounded, sans-serif; font-weight: 800; font-size: clamp(44px, 6.6vw, 96px); line-height: 0.92; letter-spacing: -0.045em; text-wrap: balance">[Название кейса — до 6 слов]</h1>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="tag">Инфлюенс</span><span class="tag">Продакшн</span></div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px">
+        <span style="background: #FF4D1F; color: #141414; border-radius: 999px; padding: 10px 18px; font-weight: 700; font-size: 18px">[N] млн охват</span>
+        <span style="font: 500 11px 'JetBrains Mono', monospace; color: #C9C6BF">ГЛАВНАЯ ЦИФРА КЕЙСА</span>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Паспорт проекта" class="wrap" style="padding-top: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(20,20,20,0.16); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 24px">
+    <div style="display: flex; flex-direction: column; gap: 8px"><span class="cap" style="color: #6B665E">Клиент</span><span style="font-size: 18px">[Бренд, категория]</span></div>
+    <div style="display: flex; flex-direction: column; gap: 8px"><span class="cap" style="color: #6B665E">Что делали</span><span style="font-size: 18px">[Услуги через запятую]</span></div>
+    <div style="display: flex; flex-direction: column; gap: 8px"><span class="cap" style="color: #6B665E">Сроки</span><span style="font-size: 18px">[N недель, месяц–год]</span></div>
+    <div style="display: flex; flex-direction: column; gap: 8px"><span class="cap" style="color: #6B665E">Площадки</span><span style="font-size: 18px">[Telegram, VK, YouTube, офлайн]</span></div>
+  </section>
+
+  <section aria-label="Задача" class="wrap" style="padding-top: 140px; padding-bottom: 120px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 32px">
+    <h2 class="cap" style="margin: 0">01 / Задача</h2>
+    <p style="grid-column: span 3; margin: 0; font-family: Unbounded, sans-serif; font-weight: 700; font-size: clamp(28px, 3.2vw, 46px); line-height: 1.12; letter-spacing: -0.03em; text-wrap: pretty">[Задача клиента одной-двумя фразами, до 300 знаков: что нужно было изменить, для кого и почему это было трудно.]</p>
+  </section>
+
+  <section aria-label="Идея" class="wrap" style="padding-bottom: 140px; display: flex; flex-direction: column; gap: 48px">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 32px">
+      <h2 class="cap" style="margin: 0">02 / Идея</h2>
+      <p style="grid-column: span 2; margin: 0; font-size: 22px; line-height: 1.45; text-wrap: pretty">[Идея кампании, до 400 знаков. Один инсайт и одно решение, без перечисления форматов. Ключевую фразу можно выделить <span style="background: #FF4D1F; color: #141414; padding: 0 4px">акцентом</span>.]</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 16px">
+      <div class="ph" style="aspect-ratio: 16 / 9; background: #33312D"><span class="phl">Ключевой визуал 16:9 · 3840×2160</span></div>
+      <div class="ph" style="background: #2A2927"><span class="phl">Портрет 4:5 · лицо кампании</span></div>
+    </div>
+  </section>
+
+  <section aria-label="Реализация" style="background: #E6DFD3; padding: 140px 0">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 56px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 32px">
+        <h2 class="cap" style="margin: 0">03 / Реализация</h2>
+        <ol style="grid-column: span 2; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0">
+          <li style="display: grid; grid-template-columns: 56px 1fr; gap: 16px; padding: 20px 0; border-top: 1px solid rgba(20,20,20,0.16); font-size: 18px; line-height: 1.45"><span style="font: 500 13px 'JetBrains Mono', monospace; color: #6B665E; padding-top: 4px">01</span>[Шаг реализации: что сделали и с кем — одна строка]</li>
+          <li style="display: grid; grid-template-columns: 56px 1fr; gap: 16px; padding: 20px 0; border-top: 1px solid rgba(20,20,20,0.16); font-size: 18px; line-height: 1.45"><span style="font: 500 13px 'JetBrains Mono', monospace; color: #6B665E; padding-top: 4px">02</span>[Шаг реализации]</li>
+          <li style="display: grid; grid-template-columns: 56px 1fr; gap: 16px; padding: 20px 0; border-top: 1px solid rgba(20,20,20,0.16); border-bottom: 1px solid rgba(20,20,20,0.16); font-size: 18px; line-height: 1.45"><span style="font: 500 13px 'JetBrains Mono', monospace; color: #6B665E; padding-top: 4px">03</span>[Шаг реализации]</li>
+        </ol>
+      </div>
+      <div class="ph" style="aspect-ratio: 21 / 9; background: #2E2C29"><span class="phl">Сцена / общий план 16:9 · WebGL-деформация от скорости скролла</span></div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 16px">
+        <div class="ph" style="aspect-ratio: 9 / 16; background: #33312D"><span class="phl">Reels блогера 9:16</span><span style="color: #F2F0EB; position: absolute; left: 14px; bottom: 12px; font-size: 13px; font-weight: 600">@[ник] · [просмотры]</span></div>
+        <div class="ph" style="aspect-ratio: 9 / 16; background: #2B2A33"><span class="phl">Reels блогера 9:16</span><span style="color: #F2F0EB; position: absolute; left: 14px; bottom: 12px; font-size: 13px; font-weight: 600">@[ник] · [просмотры]</span></div>
+        <div class="ph" style="aspect-ratio: 9 / 16; background: #3A2C26"><span class="phl">Reels блогера 9:16</span><span style="color: #F2F0EB; position: absolute; left: 14px; bottom: 12px; font-size: 13px; font-weight: 600">@[ник] · [просмотры]</span></div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 16px">
+        <div class="ph" style="aspect-ratio: 4 / 5; background: #2A2927"><span class="phl">Деталь / продукт 4:5</span></div>
+        <div class="ph" style="aspect-ratio: 4 / 5; background: #262522"><span class="phl">Эмоция гостей / бэкстейдж 4:5</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Результат в цифрах" class="wrap" style="padding-top: 140px; padding-bottom: 120px; display: flex; flex-direction: column; gap: 48px">
+    <h2 class="cap" style="margin: 0">04 / Результат в цифрах</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 40px 24px">
+      <div style="display: flex; flex-direction: column; gap: 12px; border-top: 1px solid #FF4D1F; padding-top: 20px"><span style="font-family: Unbounded, sans-serif; font-weight: 800; font-size: clamp(64px, 7.2vw, 112px); line-height: 0.88; letter-spacing: -0.05em; color: #D93A12">[N] <span style="font-size: 0.4em">млн</span></span><span style="font-size: 17px">уникальный охват</span><span style="font: 400 12px 'JetBrains Mono', monospace; color: #6B665E">×[N] к плану</span></div>
+      <div style="display: flex; flex-direction: column; gap: 12px; border-top: 1px solid rgba(20,20,20,0.16); padding-top: 20px"><span style="font-family: Unbounded, sans-serif; font-weight: 800; font-size: clamp(64px, 7.2vw, 112px); line-height: 0.88; letter-spacing: -0.05em">[N]%</span><span style="font-size: 17px">вовлечённость (ER)</span><span style="font: 400 12px 'JetBrains Mono', monospace; color: #6B665E">бенчмарк категории — [N]%</span></div>
+      <div style="display: flex; flex-direction: column; gap: 12px; border-top: 1px solid rgba(20,20,20,0.16); padding-top: 20px"><span style="font-family: Unbounded, sans-serif; font-weight: 800; font-size: clamp(64px, 7.2vw, 112px); line-height: 0.88; letter-spacing: -0.05em">[N]</span><span style="font-size: 17px">гостей / участников</span><span style="font: 400 12px 'JetBrains Mono', monospace; color: #6B665E">из них [N] — по приглашениям</span></div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 24px; padding: 24px 0; border-top: 1px solid rgba(20,20,20,0.16); border-bottom: 1px solid rgba(20,20,20,0.16)">
+      <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 32px">[N]</span><span style="font-size: 14px; color: #3A3834">публикаций и UGC</span></div>
+      <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 32px">[N] млн</span><span style="font-size: 14px; color: #3A3834">просмотров видео</span></div>
+      <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 32px">[N] тыс.</span><span style="font-size: 14px; color: #3A3834">переходов на сайт</span></div>
+      <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 32px">[N] ₽</span><span style="font-size: 14px; color: #3A3834">CPV / CPM, если клиент разрешил</span></div>
+    </div>
+    <span style="font: 400 12px 'JetBrains Mono', monospace; color: #6B665E">Источник: [статистика площадок / отчёт клиента], период [дд.мм — дд.мм.гггг]</span>
+  </section>
+
+  <section aria-label="Отзыв клиента" class="wrap" style="padding-bottom: 140px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 32px">
+    <h2 class="cap" style="margin: 0">05 / Слово клиенту · опционально</h2>
+    <figure style="grid-column: span 2; margin: 0; display: flex; flex-direction: column; gap: 24px">
+      <blockquote style="margin: 0; font-family: Unbounded, sans-serif; font-weight: 600; font-size: clamp(24px, 2.6vw, 36px); line-height: 1.2; letter-spacing: -0.02em">«[Цитата клиента — одна мысль, до 200 знаков, с согласованием]»</blockquote>
+      <figcaption style="display: flex; gap: 14px; align-items: center"><span style="width: 48px; height: 48px; border-radius: 50%; background: #3A3834"></span><span style="display: flex; flex-direction: column; font-size: 15px"><b>[Имя Фамилия]</b><span style="color: #6B665E">[Должность, бренд]</span></span></figcaption>
+    </figure>
+  </section>
+
+  <section aria-label="Следующий кейс" style="border-top: 1px solid rgba(20,20,20,0.16)">
+    <a href="CaseDesktop.dc.html" class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; padding-top: 96px; padding-bottom: 96px; text-decoration: none">
+      <span style="display: flex; flex-direction: column; gap: 16px"><span class="cap">Следующий кейс →</span><span style="font-family: Unbounded, sans-serif; font-weight: 800; font-size: clamp(44px, 6.4vw, 92px); line-height: 0.92; letter-spacing: -0.045em">[Название следующего кейса]</span></span>
+      <span style="width: 260px; aspect-ratio: 4 / 5; background: #2B2A33; position: relative"><span class="phl">Превью следующего · луп</span></span>
+    </a>
+  </section>
+
+  <section id="brief" aria-label="Бриф" style="background: #FF4D1F; color: #141414">
+    <div class="wrap" style="padding-top: 80px; padding-bottom: 80px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 32px">
+      <span style="font-family: Unbounded, sans-serif; font-weight: 800; font-size: clamp(32px, 4vw, 56px); line-height: 0.95; letter-spacing: -0.04em">Хотите так же?</span>
+      <a href="Brief.dc.html" style="background: #141414; color: #F3EEE6; text-decoration: none; padding: 18px 28px; border-radius: 999px; font-weight: 600; font-size: 16px">Бриф на похожий проект</a>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

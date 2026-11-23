@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>toburo — редизайн сайта · превью</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&family=Onest:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#F3EEE6;color:#141414;font-family:Onest,system-ui,sans-serif}
+a{color:#141414;text-decoration:none}
+.wrap{max-width:1440px;margin:0 auto;padding:0 clamp(20px,4.4vw,64px);box-sizing:border-box}
+.cap{font:500 12px 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#3A3834}
+.mark{font-family:Unbounded,sans-serif;font-weight:800;letter-spacing:-.05em;display:flex;align-items:baseline;line-height:.82}
+.dot{display:inline-block;width:.6em;height:.6em;border-radius:50%;background:#FF4D1F;margin:0 .02em 0 .03em}
+.group{padding:56px 0;border-top:1px solid rgba(20,20,20,.16);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:24px}
+.group h2{margin:0;font-family:Unbounded,sans-serif;font-weight:700;font-size:26px;letter-spacing:-.02em;line-height:1.1}
+.cards{grid-column:span 3;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:12px}
+.card{display:flex;flex-direction:column;gap:10px;padding:22px;background:#E6DFD3;border:1.5px solid transparent;min-height:140px;transition:border-color .2s,background .2s}
+.card:hover,.card:focus-visible{border-color:#FF4D1F;background:#EDE6DA;outline:none}
+.card b{font-family:Unbounded,sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em}
+.card span{font-size:15px;line-height:1.45;color:#3A3834}
+.card i{font:normal 500 11px 'JetBrains Mono',monospace;letter-spacing:.1em;color:#141414;margin-top:auto;display:flex;align-items:center;gap:8px}.card i::before{content:'';width:8px;height:8px;border-radius:50%;background:#FF4D1F}
+@media (max-width:900px){.cards{grid-column:auto}}
+</style>
+</head>
+<body>
+<header class="wrap" style="padding-top:48px;padding-bottom:72px;display:flex;flex-direction:column;gap:40px">
+  <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px" class="cap"><span>Редизайн totemburo.ru</span><span>Превью для заказчика · ноябрь 2026</span></div>
+  <div class="mark" style="font-size:clamp(88px,19vw,280px)"><span>t</span><span class="dot"></span><span>buro</span></div>
+  <p style="margin:0;max-width:640px;font-size:20px;line-height:1.45">Концепции сигнатурной сцены, дизайн-система, макеты главной и кейса, motion-прототипы и ТЗ на контент. Прототипы интерактивны — лучше смотреть с компьютера.</p>
+</header>
+<main class="wrap">
+  <section class="group">
+    <h2>1. Концепция</h2>
+    <div class="cards">
+      <a class="card" href="moodboard.html"><b>Moodboard</b><span>Настроение, фактуры, референсы и что из них берём.</span><i>1440 × 1100</i></a>
+      <a class="card" href="concept-a.html"><b>A — Центр внимания</b><span>Темнота, курсор-прожектор, свет собирается в точку.</span><i>РАСКАДРОВКА</i></a>
+      <a class="card" href="concept-b.html"><b>B — Сеть звёзд</b><span>3D-созвездие блогеров, камера летит сквозь сеть.</span><i>РАСКАДРОВКА</i></a>
+      <a class="card" href="concept-c.html"><b>C — Кинетический вордмарк</b><span>Жидкий хромированный toburo, распад на частицы.</span><i>РАСКАДРОВКА</i></a>
+    </div>
+  </section>
+  <section class="group">
+    <h2>2. Система</h2>
+    <div class="cards">
+      <a class="card" href="palettes.html"><b>Палитра «Тёплый медиа»</b><span>Основная: крем, графит, сигнальный оранжевый. Рядом — отклонённая альтернатива.</span><i>ЦВЕТ</i></a>
+      <a class="card" href="type.html"><b>Две шрифтовые пары</b><span>Unbounded + Onest и Roboto Flex + Golos Text.</span><i>ТИПОГРАФИКА</i></a>
+      <a class="card" href="ui-kit.html"><b>UI-kit</b><span>Кегли, кнопки и состояния, курсоры, поля брифа.</span><i>КОМПОНЕНТЫ</i></a>
+    </div>
+  </section>
+  <section class="group">
+    <h2>3. Motion-прототипы</h2>
+    <div class="cards">
+      <a class="card" href="motion-hero.html"><b>Лоадер + hero</b><span>Двигайте мышью, крутите колесо — свет сходится в точку.</span><i>ИНТЕРАКТИВ</i></a>
+      <a class="card" href="motion-services.html"><b>Услуги с hover-видео</b><span>Превью едет за курсором, клик раскрывает состав.</span><i>ИНТЕРАКТИВ</i></a>
+      <a class="card" href="motion-case.html"><b>Переход в кейс</b><span>Карточка раскрывается на весь экран без перезагрузки.</span><i>ИНТЕРАКТИВ</i></a>
+      <a class="card" href="brief.html"><b>Многошаговый бриф</b><span>Направление → бюджет → сроки → контакты.</span><i>ИНТЕРАКТИВ</i></a>
+    </div>
+  </section>
+  <section class="group">
+    <h2>4. Макеты</h2>
+    <div class="cards">
+      <a class="card" href="home.html"><b>Главная · 1440</b><span>Полная страница: от hero до футера.</span><i>DESKTOP</i></a>
+      <a class="card" href="home-mobile.html"><b>Главная · 390</b><span>Мобильная версия с облегчёнными сценами.</span><i>MOBILE</i></a>
+      <a class="card" href="case.html"><b>Шаблон кейса · 1440</b><span>Обложка → задача → идея → реализация → цифры.</span><i>DESKTOP</i></a>
+      <a class="card" href="case-mobile.html"><b>Шаблон кейса · 390</b><span>Тот же шаблон для телефона.</span><i>MOBILE</i></a>
+    </div>
+  </section>
+  <section class="group">
+    <h2>5. Контент</h2>
+    <div class="cards">
+      <a class="card" href="content-spec.html"><b>ТЗ на контент кейсов</b><span>Видео, фото, метрики, стиль съёмки и список материалов от вас.</span><i>ДОКУМЕНТ</i></a>
+    </div>
+  </section>
+</main>
+<footer class="wrap" style="padding-top:40px;padding-bottom:40px;border-top:1px solid rgba(20,20,20,.16);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#6B665E">
+  <span>Значения в квадратных скобках — места под реальные данные агентства.</span>
+  <span>Шрифты Unbounded, Onest, Roboto Flex, Golos Text — SIL OFL.</span>
+</footer>
+</body>
+</html>
