@@ -15,9 +15,18 @@
     '.lv-up{opacity:0;transform:translateY(48px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}',
     '.lv-up.in{opacity:1;transform:none}',
     '.lv-loader{position:fixed;inset:0;z-index:200;background:#303030;perspective:700px;display:flex;align-items:center;justify-content:center;transition:opacity .6s ease}',
-    '.lv-loader i{width:85px;height:64px;border-radius:50%;background:repeating-radial-gradient(ellipse at 50% 50%,#C3B9AB 0 6%,#A79C8C 6% 8%,#B8AEA0 8% 14%);box-shadow:inset 0 0 0 3px #8E8373,0 0 70px 14px rgba(184,174,160,.22);animation:lvspin 1.2s linear infinite}',
+    '.lv-seal{--s:230px;margin:0;color:#EFEBE4}',
+    '.lv-seal .ring{stroke-dasharray:604;animation:ldring .6s ease both}',
+    '@keyframes ldring{from{stroke-dashoffset:604}to{stroke-dashoffset:0}}',
+    '.lv-seal .seal-txt{opacity:0;animation:ldtxt .5s ease .3s both,sealspin 48s linear infinite}',
+    '@keyframes ldtxt{to{opacity:1}}',
+    '.lv-stamp{position:absolute;inset:0;animation:ldstamp .45s cubic-bezier(.5,0,.3,1) .6s both}',
+    '@keyframes ldstamp{0%{opacity:0;transform:scale(1.7) rotate(-14deg)}70%{opacity:1;transform:scale(.94) rotate(0)}100%{opacity:1;transform:scale(1)}}',
+    '.lv-ink{position:absolute;left:50%;top:50%;width:64%;height:64%;margin:-32% 0 0 -32%;border-radius:50%;border:2px solid #B8AEA0;opacity:0;animation:ldink .7s ease-out .95s both}',
+    '@keyframes ldink{0%{opacity:.7;transform:scale(1)}100%{opacity:0;transform:scale(1.5)}}',
+    '@keyframes lvsealspin{to{transform:rotate(360deg)}}',
+    'a:hover .seal-mini svg{animation:lvsealspin .9s cubic-bezier(.2,.8,.2,1)}',
     '@keyframes lvspin{to{transform:rotateY(360deg)}}',
-    'a:hover .wm-o{animation:lvspin .9s cubic-bezier(.2,.8,.2,1)}',
     '.lv-loader b{position:absolute;right:40px;bottom:32px;font:500 14px "JetBrains Mono",monospace;color:#9C9A94}',
     '.lv-loader span{position:absolute;left:40px;bottom:32px;font:500 12px "JetBrains Mono",monospace;letter-spacing:.14em;color:#9C9A94}',
     '.lv-cursor{position:fixed;left:0;top:0;z-index:150;pointer-events:none;width:96px;height:96px;margin:-48px 0 0 -48px;border-radius:50%;background:#576257;color:#EFEBE4;display:flex;align-items:center;justify-content:center;font:600 14px Onest,sans-serif;transform:scale(0);transition:transform .35s cubic-bezier(.2,.8,.2,1)}',
@@ -96,12 +105,16 @@
   if (!reduce) {
     var ld = document.createElement('div');
     ld.className = 'lv-loader';
-    ld.innerHTML = '<i></i><b>000</b><span>TOBURO · ВКЛЮЧАЕМ СВЕТ</span>';
+    ld.innerHTML = '<div class="seal lv-seal" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><path id="lv-seal-p" d="M100 100 m-80 0 a80 80 0 1 1 160 0 a80 80 0 1 1 -160 0"></path></defs>' +
+      '<circle class="ring" cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="2.4" transform="rotate(-90 100 100)"></circle>' +
+      '<g class="seal-txt"><text font-family="Cinzel, serif" font-weight="600" font-size="12.5" letter-spacing="4.4" fill="currentColor"><textPath href="#lv-seal-p">IN OCVLIS OMNIVM · TOBVRO · MMXXVI ·</textPath></text></g></svg>' +
+      '<span class="lv-ink"></span><span class="lv-stamp"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="64" fill="#576257"></circle></svg>' +
+      '<span class="mono" style="font-size:70px"><span class="wm-g wm-t"></span><span class="wm-g wm-bb"></span></span></span></div><b>000</b><span>TOBURO · СТАВИМ ПЕЧАТЬ</span>';
     document.body.appendChild(ld);
     document.documentElement.style.overflow = 'hidden';
-    var t0 = performance.now(), dot = ld.querySelector('i'), cnt = ld.querySelector('b');
+    var t0 = performance.now(), cnt = ld.querySelector('b');
     var tick = function (now) {
-      var p = clamp((now - t0) / 1300, 0, 1);
+      var p = clamp((now - t0) / 1650, 0, 1);
       cnt.textContent = String(Math.floor(p * 100)).padStart(3, '0');
       if (p < 1) { requestAnimationFrame(tick); return; }
       ld.style.opacity = 0;
@@ -336,7 +349,7 @@
     });
     var applyReveal = function () { if (canReveal()) { foot.style.position = 'sticky'; foot.style.bottom = '0'; foot.style.zIndex = '0'; } else { foot.style.position = ''; } };
     applyReveal(); window.addEventListener('resize', applyReveal);
-    var disc = $('.wm-o', foot);
+    var disc = $('.seal-big', foot);
     mark = disc && disc.parentElement;
     if (mark) { mark.style.perspective = '900px'; mark.style.transformOrigin = '0 100%'; }
     tickers.push(function () {
@@ -344,7 +357,7 @@
       var fh = foot.offsetHeight, b = before.getBoundingClientRect().bottom;
       var p = reduce ? 1 : clamp(1 - (b - (vh() - fh)) / fh, 0, 1);
       mark.style.transform = 'translateY(' + ((1 - p) * 90) + 'px) scale(' + (0.9 + 0.1 * ease(p)) + ')';
-      disc.style.transform = 'rotateY(' + (ease(p) * 540) + 'deg)';
+      disc.style.transform = 'rotate(' + ((1 - ease(p)) * -120) + 'deg) scale(' + (0.6 + 0.4 * ease(p)) + ')';
     });
   }
 

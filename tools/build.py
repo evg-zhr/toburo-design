@@ -103,6 +103,8 @@ def convert(src, mode, live=None):
         "<!doctype html>\n<html lang=\"ru\">\n<head>\n<meta charset=\"utf-8\">\n"
         "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n"
         "<meta name=\"robots\" content=\"noindex\">\n"
+        "<link rel=\"icon\" type=\"image/png\" href=\"img/favicon.png\">\n"
+        "<link rel=\"apple-touch-icon\" href=\"img/apple-touch-icon.png\">\n"
         "<title>" + title + "</title>\n" + helmet + "\n<style>" + extra_css + "</style>\n</head>\n<body>\n"
         + body + "\n" + BADGE + "\n" + script
         + ('\n<script src="' + live + '"></script>' if live else "")

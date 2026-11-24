@@ -11,7 +11,8 @@
   css.textContent = '.lv-up{opacity:0;transform:translateY(48px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}.lv-up.in{opacity:1;transform:none}' +
     '.lv-in{animation:lvin 1s cubic-bezier(.2,.8,.2,1) both}@keyframes lvin{from{opacity:0;transform:translateY(60px)}to{opacity:1;transform:none}}' +
     '.lv-cover-in{animation:lvcov .9s ease both}@keyframes lvcov{from{opacity:0}to{opacity:1}}' +
-    '@media (prefers-reduced-motion: reduce){.lv-up{opacity:1;transform:none;transition:none}.lv-in,.lv-cover-in{animation:none}}';
+    '.lv-stamp-in{animation:lvstamp .5s cubic-bezier(.5,0,.3,1) .7s both}@keyframes lvstamp{0%{opacity:0;transform:rotate(-30deg) scale(1.8)}70%{opacity:1;transform:rotate(-10deg) scale(.94)}100%{opacity:1;transform:rotate(-10deg) scale(1)}}' +
+    '@media (prefers-reduced-motion: reduce){.lv-up{opacity:1;transform:none;transition:none}.lv-in,.lv-cover-in,.lv-stamp-in{animation:none}}';
   document.head.appendChild(css);
 
   /* обложка: продолжение перехода из списка — вход заголовка, свет следует за курсором */
@@ -21,6 +22,8 @@
     var glow = $$('div[aria-hidden="true"]', cover)[0];
     var copy = cover.lastElementChild;
     copy.classList.add('lv-in'); copy.style.animationDelay = '.25s';
+    var stamp = $('.seal-big', cover);
+    if (stamp) { stamp.classList.add('lv-stamp-in'); }
     var tx = 0, ty = 0, x = 0, y = 0;
     cover.addEventListener('pointermove', function (e) { var r = cover.getBoundingClientRect(); tx = (e.clientX - r.left) / r.width - 0.5; ty = (e.clientY - r.top) / r.height - 0.5; }, { passive: true });
     tickers.push(function () {
