@@ -17,6 +17,10 @@ BLOBS = {
     "/_blob/da99a2c5c3c2810c125d5cbd63eb39ec": "img/tt-specimen.png",
     "/_blob/84ef3e58c4728f501b864323de1ea03f": "img/wm-bb.png",
     "/_blob/f4012e54fbdec642b1e9e600bef3986d": "img/wm-toburo.png",
+    "/_blob/67ce2d66643298e84b457c0c74d5ec11": "img/lg-to.png",
+    "/_blob/4c97763e4f1d856b2f5951ed602468b0": "img/lg-buro.png",
+    "/_blob/c93a5fcbe878699ac8da5ee9a61d21b6": "img/lg-to-ru.png",
+    "/_blob/aff7bdfae2e53e4742605eef03894dbe": "img/lg-buro-ru.png",
 }
 
 PAGES = {
@@ -41,6 +45,7 @@ PAGES = {
     "LogoB": ("logo-b.html", "fixed"),
     "LogoC": ("logo-c.html", "fixed"),
     "LogoMotion": ("logo-motion.html", "fixed"),
+    "LogoTO": ("logo-toburo.html", "fixed"),
 }
 
 FIT_JS = """
@@ -123,6 +128,8 @@ def main():
         shutil.copy(png, out_dir / "img" / png.name)
     for stem, (out, mode) in PAGES.items():
         html = convert((src_dir / (stem + ".dc.html")).read_text(encoding="utf-8"), mode, LIVE.get(out))
+        if out == "home.html":  # рабочий макет: без служебных ссылок
+            html = html.replace(BADGE, "")
         (out_dir / out).write_text(html, encoding="utf-8")
         print("built", out)
 

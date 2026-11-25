@@ -86,6 +86,31 @@
     tickers.push(function () { sx += (nx - sx) * 0.1; sy += (ny - sy) * 0.1; pv.style.transform = 'translate(' + (sx * 120) + 'px,' + (sy * 60) + 'px) rotate(' + (sx * 6) + 'deg)'; });
   }
 
+/* стоковые фото вместо плейсхолдеров */
+  var U = function (id, w) { return 'https://images.unsplash.com/photo-' + id + '?auto=format&fit=crop&w=' + (w || 1200) + '&q=70'; };
+  var mcss = document.createElement('style');
+  mcss.textContent = '.lv-img{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .8s ease;animation:lvkb 18s ease-in-out infinite alternate}.lv-img.ok{opacity:1}@keyframes lvkb{from{transform:scale(1.02)}to{transform:scale(1.12) translate(-2%,-1%)}}@media (prefers-reduced-motion: reduce){.lv-img{animation:none}}';
+  document.head.appendChild(mcss);
+  var photo = function (el, id, w) {
+    if (!el) return;
+    var im = new Image();
+    im.onload = function () {
+      var d = document.createElement('div'); d.className = 'lv-img'; d.style.backgroundImage = 'url(' + im.src + ')';
+      el.style.overflow = 'hidden'; el.insertBefore(d, el.firstChild);
+      $$('.phl', el).forEach(function (s) { s.style.display = 'none'; });
+      requestAnimationFrame(function () { d.classList.add('ok'); });
+    };
+    im.src = U(id, w);
+  };
+  if (cover) {
+    photo(cover, '1603910234616-3b5f4a6be2b4', 1920);
+    $$('div[aria-hidden="true"]', cover).forEach(function (d) { if (/ЛОГО/.test(d.textContent)) d.style.display = 'none'; });
+  }
+  var PH = ['1540039155733-5bb30b53aa14', '1758613654707-8bdab92f711d', '1532171875345-9712d9d4f65a', '1695408247109-3bf125ad0538', '1730320784834-2a296bc92053', '1699730164892-d7c433524ff3', '1517457373958-b7bdd4587205', '1612544409025-e1f6a56c1152'];
+  medias.forEach(function (m, i) { photo(m, PH[i % PH.length], 1200); });
+  var nextPv = $('section[aria-label="Следующий кейс"] a > span:last-child');
+  if (nextPv) photo(nextPv, '1459749411175-04bf5292ceea', 600);
+
   var loop = function (now) { for (var i = 0; i < tickers.length; i++) tickers[i](now); requestAnimationFrame(loop); };
   requestAnimationFrame(loop);
 })();

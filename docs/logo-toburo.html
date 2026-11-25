@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<title>Логотип ТО!БЮРО — «!» как прожектор</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&family=Onest:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#303030}
+.wm-g{display:inline-block;height:.7167em;background:currentColor;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%}
+.lg{display:inline-flex;align-items:flex-end;line-height:1;--ex:#B8AEA0}.lg .wm-g{height:.73em}.lg-to{aspect-ratio:1024/438;-webkit-mask-image:url(img/lg-to.png);mask-image:url(img/lg-to.png)}.lg-buro{aspect-ratio:2180/438;-webkit-mask-image:url(img/lg-buro.png);mask-image:url(img/lg-buro.png)}.lg-to-ru{aspect-ratio:1024/438;-webkit-mask-image:url(img/lg-to-ru.png);mask-image:url(img/lg-to-ru.png)}.lg-buro-ru{aspect-ratio:2360/438;-webkit-mask-image:url(img/lg-buro-ru.png);mask-image:url(img/lg-buro-ru.png)}.lg-ex{display:inline-block;flex:none;height:.73em;aspect-ratio:187/726;margin:0 .134em 0 .105em;color:var(--ex)}.lg-ex svg{display:block;width:100%;height:100%;overflow:visible;fill:currentColor}.ex-stem,.ex-dot{transform-box:fill-box}.ex-stem{transform-origin:50% 0}.ex-dot{transform-origin:50% 100%}a:hover .lg .ex-dot{animation:exbounce .7s cubic-bezier(.3,0,.3,1)}a:hover .lg .ex-stem{animation:exflick .6s steps(1)}@keyframes exbounce{0%,55%,85%,100%{transform:none}30%{transform:translateY(-60%)}70%{transform:translateY(-18%)}}@keyframes exflick{0%,35%,70%,100%{opacity:1}20%{opacity:.3}55%{opacity:.5}}.lg-tag{margin:0;font-family:'TT Travels Next',Unbounded,sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1.05}@media (prefers-reduced-motion: reduce){.lg .ex-dot,.lg .ex-stem{animation:none !important}}
+.cap{font:500 11px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase}
+.stage{height:300px;position:relative;overflow:hidden;background:#262826;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px}
+/* A — прожектор */
+.a .ex-stem{animation:aStem 5s cubic-bezier(.6,0,.2,1) infinite}
+@keyframes aStem{0%{transform:scaleY(0)}10%,92%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+.a .ex-dot{animation:aDot 5s cubic-bezier(.5,0,.6,1.6) infinite}
+@keyframes aDot{0%,8%{opacity:0;transform:translateY(-420%)}20%,92%{opacity:1;transform:none}100%{opacity:0}}
+.a .lg-to,.a .lg-to-ru{animation:aTo 5s cubic-bezier(.2,.8,.2,1) infinite}
+.a .lg-buro,.a .lg-buro-ru{animation:aBuro 5s cubic-bezier(.2,.8,.2,1) infinite}
+@keyframes aTo{0%,22%{opacity:0;clip-path:inset(0 0 0 100%);transform:translateX(40%)}34%,92%{opacity:1;clip-path:inset(0);transform:none}100%{opacity:0}}
+@keyframes aBuro{0%,22%{opacity:0;clip-path:inset(0 100% 0 0);transform:translateX(-25%)}34%,92%{opacity:1;clip-path:inset(0);transform:none}100%{opacity:0}}
+.a-glow{position:absolute;left:50%;top:50%;width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;background:radial-gradient(circle,rgba(184,174,160,.3) 0%,rgba(184,174,160,0) 62%);animation:aGlow 5s ease infinite}
+@keyframes aGlow{0%,15%{opacity:0;transform:scale(.3)}28%,92%{opacity:1;transform:none}100%{opacity:0}}
+/* B — разделитель */
+.b-q{font:700 22px 'TT Travels Next',Unbounded,sans-serif;color:#C9C6BF;animation:bQ 5s ease infinite}
+@keyframes bQ{0%{opacity:0;transform:translateY(10px)}12%,92%{opacity:1;transform:none}100%{opacity:0}}
+.b .lg-to-ru{animation:bTo 5s cubic-bezier(.2,.8,.2,1) infinite}
+.b .lg-buro-ru{animation:bBuro 5s cubic-bezier(.2,.8,.2,1) infinite}
+@keyframes bTo{0%,20%{transform:translateX(40%);opacity:0}36%,92%{transform:none;opacity:1}100%{opacity:0}}
+@keyframes bBuro{0%,20%{transform:translateX(-20%);opacity:0}36%,92%{transform:none;opacity:1}100%{opacity:0}}
+.b .lg-ex{animation:bEx 5s cubic-bezier(.5,0,.6,1.5) infinite}
+@keyframes bEx{0%,30%{transform:translateY(-160%);opacity:0}44%,92%{transform:none;opacity:1}100%{opacity:0}}
+/* C — лампа */
+.c .ex-stem{animation:cFl 3.2s steps(1) infinite}
+@keyframes cFl{0%,40%,52%,62%,100%{opacity:1}44%{opacity:.25}56%{opacity:.5}}
+.c .ex-dot{animation:cBo 3.2s cubic-bezier(.3,0,.3,1) infinite}
+@keyframes cBo{0%,70%,88%,100%{transform:none}78%{transform:translateY(-60%)}94%{transform:translateY(-15%)}}
+@media (prefers-reduced-motion: reduce){.stage *{animation:none !important}}
+</style>
+
+<style>html,body{margin:0}</style>
+</head>
+<body>
+<div id="tb-fit" style="overflow:hidden"><div style="width: 1440px; height: 1000px; box-sizing: border-box; padding: 52px 56px; background: #303030; color: #EFEBE4; font-family: Onest, system-ui, sans-serif; display: flex; flex-direction: column; gap: 26px">
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 40px">
+    <div style="display: flex; flex-direction: column; gap: 10px"><span class="cap" style="color: #C9C6BF">Логотип заказчика · ТО!БЮРО</span><h2 style="margin: 0; font-family: 'TT Travels Next', Unbounded, sans-serif; font-weight: 700; font-size: 48px; line-height: 1">«!» — прожектор и разделитель</h2></div>
+    <p style="margin: 0; max-width: 620px; font-size: 16px; line-height: 1.5; color: #C9C6BF">Буквы — TT Travels Next Bold, как в присланных вариантах. «!» перерисован отдельно, чтобы двигаться: ножка — луч света, точка — тот, на кого он падает. Он же разделитель в фразе «Не знаешь, куда идти? В бюро!».</p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1.3fr 1fr 1fr 200px; gap: 14px; height: 200px">
+    <div style="background: #262826; display: flex; align-items: center; justify-content: center; position: relative"><span class="lg" role="img" aria-label="TO!BURO" style="font-size: 72px"><span class="wm-g lg-to"></span><span class="lg-ex"><svg viewBox="0 0 187 726" aria-hidden="true"><path class="ex-stem" d="M6 13 H181 L150 490 H37 Z"></path><ellipse class="ex-dot" cx="93.5" cy="640" rx="92" ry="86"></ellipse></svg></span><span class="wm-g lg-buro"></span></span><span class="cap" style="position: absolute; left: 14px; bottom: 12px; color: #9C9A94">Основной · на чёрном</span></div>
+    <div style="background: #EFEBE4; color: #303030; display: flex; align-items: center; justify-content: center; position: relative"><span class="lg" role="img" aria-label="ТО!БЮРО" style="font-size: 44px; --ex: #576257"><span class="wm-g lg-to-ru"></span><span class="lg-ex"><svg viewBox="0 0 187 726" aria-hidden="true"><path class="ex-stem" d="M6 13 H181 L150 490 H37 Z"></path><ellipse class="ex-dot" cx="93.5" cy="640" rx="92" ry="86"></ellipse></svg></span><span class="wm-g lg-buro-ru"></span></span><span class="cap" style="position: absolute; left: 14px; bottom: 12px; color: #5E665E">Кириллица · на бумаге</span></div>
+    <div style="background: #576257; display: flex; align-items: center; justify-content: center; position: relative"><span class="lg" role="img" aria-label="TO!BURO" style="font-size: 48px; --ex: #303030"><span class="wm-g lg-to"></span><span class="lg-ex"><svg viewBox="0 0 187 726" aria-hidden="true"><path class="ex-stem" d="M6 13 H181 L150 490 H37 Z"></path><ellipse class="ex-dot" cx="93.5" cy="640" rx="92" ry="86"></ellipse></svg></span><span class="wm-g lg-buro"></span></span><span class="cap" style="position: absolute; left: 14px; bottom: 12px; color: #E3DDD3">На зелёном</span></div>
+    <div style="background: #262826; display: flex; align-items: center; justify-content: center; gap: 14px; position: relative">
+      <span style="width: 64px; height: 64px; border-radius: 50%; background: #576257; display: flex; align-items: center; justify-content: center; color: #EFEBE4; font-size: 46px"><span class="lg-ex" style="margin: 0; color: #EFEBE4"><svg viewBox="0 0 187 726" aria-hidden="true"><path d="M6 13 H181 L150 490 H37 Z"></path><ellipse cx="93.5" cy="640" rx="92" ry="86"></ellipse></svg></span></span>
+      <span style="width: 32px; height: 32px; border-radius: 50%; background: #576257; display: flex; align-items: center; justify-content: center; font-size: 23px"><span class="lg-ex" style="margin: 0; color: #EFEBE4"><svg viewBox="0 0 187 726" aria-hidden="true"><path d="M6 13 H181 L150 490 H37 Z"></path><ellipse cx="93.5" cy="640" rx="92" ry="86"></ellipse></svg></span></span>
+      <span class="cap" style="position: absolute; left: 14px; bottom: 12px; color: #9C9A94">Фавикон</span>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px">
+    <div style="display: flex; flex-direction: column; gap: 10px">
+      <div class="stage"><div class="a-glow" aria-hidden="true"></div><span class="lg a" role="img" aria-label="TO!BURO" style="font-size: 54px; position: relative"><span class="wm-g lg-to"></span><span class="lg-ex"><svg viewBox="0 0 187 726" aria-hidden="true"><path class="ex-stem" d="M6 13 H181 L150 490 H37 Z"></path><ellipse class="ex-dot" cx="93.5" cy="640" rx="92" ry="86"></ellipse></svg></span><span class="wm-g lg-buro"></span></span></div>
+      <span class="cap" style="color: #B8AEA0">A · Прожектор — лоадер</span>
+      <span style="font-size: 13px; line-height: 1.45; color: #C9C6BF">Ножка «!» опускается лучом, точка падает и отскакивает, вокруг вспыхивает свет, TO и BURO выезжают из-за знака. Уже стоит в живом прототипе.</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 10px">
+      <div class="stage"><span class="b-q">Не знаешь, куда идти?</span><span class="lg b" role="img" aria-label="ТО!БЮРО" style="font-size: 50px"><span class="wm-g lg-to-ru"></span><span class="lg-ex"><svg viewBox="0 0 187 726" aria-hidden="true"><path class="ex-stem" d="M6 13 H181 L150 490 H37 Z"></path><ellipse class="ex-dot" cx="93.5" cy="640" rx="92" ry="86"></ellipse></svg></span><span class="wm-g lg-buro-ru"></span></span></div>
+      <span class="cap" style="color: #B8AEA0">B · Разделитель — футер, реклама</span>
+      <span style="font-size: 13px; line-height: 1.45; color: #C9C6BF">Вопрос — и ответ: ТО и БЮРО съезжаются, «!» падает между ними. Читается как «В бюро!». В прототипе — в футере.</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 10px">
+      <div class="stage"><span class="lg c" role="img" aria-label="TO!BURO" style="font-size: 54px"><span class="wm-g lg-to"></span><span class="lg-ex"><svg viewBox="0 0 187 726" aria-hidden="true"><path class="ex-stem" d="M6 13 H181 L150 490 H37 Z"></path><ellipse class="ex-dot" cx="93.5" cy="640" rx="92" ry="86"></ellipse></svg></span><span class="wm-g lg-buro"></span></span></div>
+      <span class="cap" style="color: #B8AEA0">C · Лампа — шапка при наведении</span>
+      <span style="font-size: 13px; line-height: 1.45; color: #C9C6BF">«!» мигает, как лампа над сценой, точка подпрыгивает. Короткая анимация на наведение — без отвлечения при чтении.</span>
+    </div>
+  </div>
+</div></div>
+<a href="index.html" style="position:fixed;left:12px;bottom:12px;z-index:99;background:rgba(14,14,14,.72);color:#F2F0EB;border:1px solid rgba(242,240,235,.3);border-radius:999px;padding:8px 14px;font:500 12px/1 'JetBrains Mono',monospace;text-decoration:none;backdrop-filter:blur(6px)">← toburo · все материалы</a>
+<script>
+(function(){
+  var box = document.getElementById('tb-fit'), root = box.firstElementChild;
+  function fit(){
+    var w = root.offsetWidth, k = Math.min(1, (window.innerWidth) / w);
+    root.style.transform = k < 1 ? 'scale(' + k + ')' : '';
+    root.style.transformOrigin = '0 0';
+    box.style.height = (root.offsetHeight * k) + 'px';
+    box.style.width = (w * k) + 'px';
+  }
+  window.addEventListener('resize', fit); fit();
+  if (document.fonts) document.fonts.ready.then(fit);
+})();
+</script>
+</body>
+</html>
